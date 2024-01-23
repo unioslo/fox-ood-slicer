@@ -44,11 +44,19 @@ fi
 eval $(dbus-launch --sh-syntax)
 
 # Set official desktop background:
-#xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVNC-0/workspace0/last-image
+#xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVNC-0/workspace0/last-image -s /cluster/opt/fox-bg.png
 
 # No screensaver or power mgmt
 xfconf-query -c xfce4-screensaver -p /saver/enabled -s false
 xfconf-query -c xfce4-screensaver -p /lock/enabled -s false
 
+module --ignore_cache load Slicer/5.4.0
+
 # Start up xfce desktop (block until user logs out of desktop)
-xfce4-session
+(xfce4-session) &
+
+<%- if context.ec_gpus.to_i > 0 -%>
+  vglrun Slicer
+<%- else -%>
+Slicer
+<%- end -%>

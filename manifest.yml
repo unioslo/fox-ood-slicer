@@ -1,10 +1,12 @@
 ---
-name: Fox Desktop
+name: 3D Slicer
 category: Interactive Apps
-subcategory: Desktops
+subcategory: GUIs
 role: batch_connect
 description: |
-        Launches a lightweight XFCE desktop environment, hosted in a container.
-        GPU rendering is enabled. To use, start your program with `vglrun -d egl <application>`.
+  This app will launch a [3D Slicer] GUI on Fox. You will be able
+  to interact with it through a VNC session.
+
+  [3D Slicer]: https://www.slicer.org
 tile:
-  sub_caption: "XFCE desktop"
+  sub_caption: "image computing platform"
