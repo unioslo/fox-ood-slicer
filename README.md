@@ -15,7 +15,7 @@ To avoid duplicate code in every app, we create a class containing the resource 
 
 ### Running apps automatically
 
-To add specific desktop apps like MATLAB, RStudio, ParaView and so on we use this app with a few modifications. See the branches of this repo to view them.
+To add specific desktop apps like MATLAB, RStudio, ParaView and so on we use this app with a few modifications. See the forks of this repo to view them.
 
 ## Authors:
 
