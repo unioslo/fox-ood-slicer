@@ -1,0 +1,10 @@
+---
+name: Fox Desktop
+category: Interactive Apps
+subcategory: Desktops
+role: batch_connect
+description: |
+        Launches a lightweight XFCE desktop environment, hosted in a container.
+        GPU rendering is enabled. To use, start your program with `vglrun -d egl <application>`.
+tile:
+  sub_caption: "XFCE desktop"
